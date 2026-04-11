@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF59CC44-0C7B-48AA-827B-2F952F4960E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UTN.Winform.Electronicos</RootNamespace>
+    <AssemblyName>AppDispocitivosElectronicos</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=3.3.0.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.3.3.0\lib\net462\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.5\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Server.1.0.0\lib\net46\Microsoft.SqlServer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.170.1000.7\lib\net472\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.10.0.5\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.10.0.5\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.10.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.11.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.11\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.11.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.11\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AdicionalesBLL\BLLProvedor.cs" />
+    <Compile Include="BLL\AdicionalesBLL\BLLTarjetasTipo.cs" />
+    <Compile Include="BLL\AdicionalesBLL\BLLTipoIdentificacion.cs" />
+    <Compile Include="BLL\AdicionalesBLL\BLLVendedor.cs" />
+    <Compile Include="BLL\BLLCliente.cs" />
+    <Compile Include="BLL\BLLDolar.cs" />
+    <Compile Include="BLL\BLLFactura.cs" />
+    <Compile Include="BLL\BLLMarca.cs" />
+    <Compile Include="BLL\BLLPadron.cs" />
+    <Compile Include="BLL\BLLProductos.cs" />
+    <Compile Include="BLL\BLLProvincia.cs" />
+    <Compile Include="BLL\BLLStock.cs" />
+    <Compile Include="BLL\BLLTipoDispositivo.cs" />
+    <Compile Include="BLL\InterfacesBLL\BLLModelo.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLCliente.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLFaactura.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLModelo.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLPadron.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLProducto.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLProvincias.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLStock.cs" />
+    <Compile Include="BLL\InterfacesBLL\IBLLTipo.cs" />
+    <Compile Include="Connected Services\BCCR\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AdiccionalesDAL\DALProvedor.cs" />
+    <Compile Include="DAL\AdiccionalesDAL\DALTarjetasTipo.cs" />
+    <Compile Include="DAL\AdiccionalesDAL\DALTipoIdentificaciones.cs" />
+    <Compile Include="DAL\AdiccionalesDAL\DALVendedor.cs" />
+    <Compile Include="DAL\DALCliente.cs" />
+    <Compile Include="DAL\DALDolar.cs" />
+    <Compile Include="DAL\DALFactura.cs" />
+    <Compile Include="DAL\DALMarca.cs" />
+    <Compile Include="DAL\DALModelo.cs" />
+    <Compile Include="DAL\DALPadron.cs" />
+    <Compile Include="DAL\DALProducto.cs" />
+    <Compile Include="DAL\DALProvincia.cs" />
+    <Compile Include="DAL\DALStock.cs" />
+    <Compile Include="DAL\DALTipo.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALStock.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALCliente.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALFactura.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALMarca.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALModelo.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALPadron.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALProducto.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALProvincia.cs" />
+    <Compile Include="DAL\InterfacesDAL\IDALTipo.cs" />
+    <Compile Include="Entidades\BCCR\Dolar.cs" />
+    <Compile Include="Entidades\BCCR\ServiceBCCR.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\DetalleFactura.cs" />
+    <Compile Include="Entidades\DTO\FacturacionDTO.cs" />
+    <Compile Include="Entidades\DTO\PadronDTO.cs" />
+    <Compile Include="Entidades\DTO\Vendedor.cs" />
+    <Compile Include="Entidades\EncabezadoFactura.cs" />
+    <Compile Include="Entidades\Impuesto.cs" />
+    <Compile Include="Entidades\IngresoStock.cs" />
+    <Compile Include="Entidades\Marca.cs" />
+    <Compile Include="Entidades\Modelo.cs" />
+    <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\Provincia.cs" />
+    <Compile Include="Entidades\Rol.cs" />
+    <Compile Include="Entidades\Tarjeta.cs" />
+    <Compile Include="Entidades\TipoDispositivo.cs" />
+    <Compile Include="Entidades\Usuarios.cs" />
+    <Compile Include="Enums\OpcionesCRUD.cs" />
+    <Compile Include="Enums\TipoBancos.cs" />
+    <Compile Include="Enums\TipoPago.cs" />
+    <Compile Include="Exeptions\ExceptionsExtention.cs" />
+    <Compile Include="Persistencia\DataBase.cs" />
+    <Compile Include="Persistencia\FactoryConexion.cs" />
+    <Compile Include="Persistencia\FactoryDatabase.cs" />
+    <Compile Include="Persistencia\IDataBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UI\Filtros\FrmClienteFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtros\FrmClienteFiltros.Designer.cs">
+      <DependentUpon>FrmClienteFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Filtros\FrmFiltroProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtros\FrmFiltroProducto.Designer.cs">
+      <DependentUpon>FrmFiltroProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Filtros\FrmVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtros\FrmVendedor.Designer.cs">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Informacion\FrmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Informacion\FrmAcercaDe.Designer.cs">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmImpuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmImpuesto.Designer.cs">
+      <DependentUpon>FrmImpuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\frmMantenimientoProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\frmMantenimientoProvincia.Designer.cs">
+      <DependentUpon>frmMantenimientoProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmModelo.Designer.cs">
+      <DependentUpon>FrmModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmProducto.Designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmStock.Designer.cs">
+      <DependentUpon>FrmStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mantenimientos\FrmTipo.Designer.cs">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Principal\FrmDolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Principal\FrmDolar.Designer.cs">
+      <DependentUpon>FrmDolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Principal\FrmElectronicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Principal\FrmElectronicos.Designer.cs">
+      <DependentUpon>FrmElectronicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Proceso Facturacion\FrmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Proceso Facturacion\FrmFacturacion.Designer.cs">
+      <DependentUpon>FrmFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Seguridad\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Seguridad\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Cryptography.cs" />
+    <Compile Include="Utils\CustomException.cs" />
+    <Compile Include="Utils\QuickResponse.cs" />
+    <Compile Include="Utils\UtilError.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Filtros\FrmClienteFiltros.resx">
+      <DependentUpon>FrmClienteFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Filtros\FrmFiltroProducto.resx">
+      <DependentUpon>FrmFiltroProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Filtros\FrmVendedor.resx">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Informacion\FrmAcercaDe.resx">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\FrmImpuesto.resx">
+      <DependentUpon>FrmImpuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\frmMantenimientoProvincia.resx">
+      <DependentUpon>frmMantenimientoProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\FrmModelo.resx">
+      <DependentUpon>FrmModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\FrmStock.resx">
+      <DependentUpon>FrmStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mantenimientos\FrmTipo.resx">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Principal\FrmDolar.resx">
+      <DependentUpon>FrmDolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Principal\FrmElectronicos.resx">
+      <DependentUpon>FrmElectronicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Proceso Facturacion\FrmFacturacion.resx">
+      <DependentUpon>FrmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Seguridad\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Connected Services\BCCR\wsindicadoreseconomicos.wsdl" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gestor\" />
+    <Folder Include="Patrones\" />
+    <Folder Include="UI\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download Light gray abstract with white and gray diagonal rounded border lines and geometric dots pattern_ for free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Descargar diseño de fondo de tecnología en color blanco gratis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %2835%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem de fundo de tecnologia cinza e branca Design de linha para conexões de comunicação em digital _ Vetor Premium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mechanical background stock illustration_ Illustration of gears - 470100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %2838%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gears pattern.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White Tech Wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %2837%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Абстрактный полутоновый фон _ Премиум вектор.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %2836%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño abstracto del fondo de la tecnología del hud _ Vector Premium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download Abstract white and grey geometric background texture for free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White Hexagon Tile Photography Backdrop - 24 x 24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %2841%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patrón hexagonal fondo abstracto y papel tapiz geométrico con forma de portada web _ Vector Premium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brochure avec dessin géométrique coloré _ Vecteur Gratuite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Памятка клиента.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %2840%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %2839%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\グラディエントの六角形の背景 _ 無料ベクトル素材.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\High tech technology geometric.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gggf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Гексагональной формы белый фон в 3d стиле бумаги _ Премиум вектор.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin_icon-icons.com_53677.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps_files_and_folders_folders_folder_storage_sort_sorting_files_file_icon_182736.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_icon-icons.com_53674.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_icon-icons.com_53651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_icon-icons.com_53661.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bubble_icon-icons.com_53676.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper_icon-icons.com_53652.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_icon-icons.com_53666.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier_icon-icons.com_53660.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_support_22593.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Yellow_27071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Green_27066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_trash_full_15820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misc_acrobat_pdf_15880.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_folder_options_15910.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderisnotavailable_thefolder_carpeta_12683.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\review_accept_ok_12774.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_options_15429.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\live_pictures_15405.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\live_contacts_15412.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_documents_16107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_panel_16062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_panel_16061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpg_21575.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt_26800.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_full_26773.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_panel_26796.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps_files_folders_folder_folders_storage_sort_sorting_files_file_icon_182704.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_23348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Blue_27067.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My_Documents_27048 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internet_Explorer_27051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My_Documents_27048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_Empty_27076.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft_Word_27027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_White_27073.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Brown_27072.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Black_27070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My_Pictures_27061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My_Downloads_27060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adobe_PDF_27057.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System_icon-icons.com_76523.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_14964.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_file_21047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_new_17850 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_17943.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_17914.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut_scissors_17842.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows_17894.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off_logout_17916.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar_money_17872.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_17814 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_17925.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_new_17850.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_accept_17936.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_delete_17889.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Delete-01_25095.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Ok-01_25121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Play-01_25091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pictures_icon-icons.com_76521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_icon-icons.com_76517.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_14732.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_14669.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile-atm-2_icon-icons.com_53094.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier_icon-icons.com_53096.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-dollar_icon-icons.com_53104.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_icon-icons.com_53113.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_17886.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_17819.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_17883.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_help_17948.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_remove_exit_17812.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_17926.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_public_17869.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_17884.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_paste_17879.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_arrow_17867.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_17871.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conversation_message_17870.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_14724.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_14776 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_help_17948 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_17835.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_five_17933.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_four_17941.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_two_17942.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_one_1_17862.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\files_add_14815.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_new_14810.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_as_14759.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_14765.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_edit_14809.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_download_14813.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_download_14813 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_copy_14804.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_download_14813.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_configuration_14811.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utilities_26846.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network_14817.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_download_14813 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\files_add_14815.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_14803.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options_1_14770.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart_14766.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderdownload_103535.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderworkspace_103530.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d_user_folder_20516.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_preferences_folder_20453.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_folder_20500.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_gmail_22737.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camara_1423.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_closethesession_close_6317.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_filetypes_21618.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman_girl_avatar_people_person_female_icon_131268.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_text_14812.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_17926 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_17816.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_21014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_12821.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iUser_24134.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punky_boy_child_man_people_avatar_icon_131258.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_17871.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defender_17949.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_help_17948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_17926.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_two_17942.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\one_17823.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_3_17873.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_six_17947.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_four_17941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_five_17933.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_icon-icons.com_68889.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_icon-icons.com_68890.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_icon-icons.com_68891.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_mail_icon_181653.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_favorite_17865.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_favourite_17895.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_icon-icons.com_68887.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_17884 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_icon-icons.com_68891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_icon-icons.com_688911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 14 mar 2026, 02_47_00 p.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_search_card_user_16713.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_book_open_search_locate_6178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BCCR\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BCCR\wsindicadoreseconomicos.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BCCR\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BCCR\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BCCR\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props'))" />
+    <Error Condition="!Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
+</Project>
