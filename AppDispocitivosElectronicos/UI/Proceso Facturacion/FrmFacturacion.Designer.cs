@@ -90,6 +90,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pbfirmaUsuario = new System.Windows.Forms.PictureBox();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoShow)).BeginInit();
             this.tlpOpcionesBotones.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -467,6 +468,7 @@
             // gbEncabezado
             // 
             this.gbEncabezado.BackColor = System.Drawing.Color.Transparent;
+            this.gbEncabezado.Controls.Add(this.webBrowser1);
             this.gbEncabezado.Controls.Add(this.label19);
             this.gbEncabezado.Controls.Add(this.lsbXml);
             this.gbEncabezado.Controls.Add(this.comboBox1);
@@ -515,8 +517,10 @@
             this.lsbXml.ItemHeight = 16;
             this.lsbXml.Location = new System.Drawing.Point(12, 248);
             this.lsbXml.Name = "lsbXml";
-            this.lsbXml.Size = new System.Drawing.Size(466, 68);
+            this.lsbXml.Size = new System.Drawing.Size(466, 36);
             this.lsbXml.TabIndex = 61;
+            this.lsbXml.Click += new System.EventHandler(this.lsbXml_Click);
+            this.lsbXml.SelectedIndexChanged += new System.EventHandler(this.lsbXml_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -743,6 +747,14 @@
             this.pbfirmaUsuario.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbfirmaUsuario_MouseMove);
             this.pbfirmaUsuario.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbfirmaUsuario_MouseUp);
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(6, 246);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
+            this.webBrowser1.TabIndex = 63;
+            // 
             // FrmFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -843,5 +855,6 @@
         private System.Windows.Forms.PictureBox pbfirmaUsuario;
         private System.Windows.Forms.ToolStripStatusLabel tsslDolar;
         private System.Windows.Forms.ToolStripTextBox tstxtRutaArchivoCorreo;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

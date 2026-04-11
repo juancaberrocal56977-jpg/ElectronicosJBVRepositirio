@@ -20,6 +20,10 @@ using UTN.Winform.Electronicos.Utils;
 using System.Reflection;
 using System.Drawing.Printing;
 using System.Net.NetworkInformation;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+using System.Xml;
+using System.Web.UI.WebControls;
 
 namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
 {
@@ -49,6 +53,69 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
             ObtenerDolar();
             Firmar();
         }
+
+        public void XmlLoadList()
+        {
+
+
+            string downloads = Path.Combine(
+    Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+    "Downloads"
+);
+
+            string filePath = Path.Combine(downloads, "ElectronicosJB.xml");
+
+            // 👇 leer contenido del XML
+            string xmlContent = File.ReadAllText(filePath);
+
+            EncabezadoFactura encabezado = new EncabezadoFactura();
+           // encabezado.XMLFacturacion = xmlContent as Xml;
+
+           // webBrowser1.DockChanged= xmlContent;
+        }
+        public void XMLGenericoElectronico()
+        {
+
+            XmlDocument xmlDoc = new XmlDocument();
+
+            // Crear nodo raíz
+            XmlElement root = xmlDoc.CreateElement("Root");
+            xmlDoc.AppendChild(root);
+
+            // Crear nodo hijo
+            XmlElement nodoName = xmlDoc.CreateElement("Name");
+            nodoName.InnerText = "Electronicos";
+            XmlElement nodoPrecio = xmlDoc.CreateElement("Precio");
+            nodoPrecio.InnerText = "Nodo prueba";
+            XmlElement nodoCantidad = xmlDoc.CreateElement("Cantidad");
+            nodoCantidad.InnerText = "Nodo prueba";
+            XmlElement NodoSub = xmlDoc.CreateElement("Subtotal");
+            NodoSub.InnerText = "Nodo prueba";
+            XmlElement nodoFecha = xmlDoc.CreateElement("Fecha");
+            nodoFecha.InnerText = DateTime.Now.Hour.ToString();
+
+            // Agregar al root
+            root.AppendChild(nodoName);
+            root.AppendChild(nodoPrecio);
+            root.AppendChild(nodoCantidad);
+            root.AppendChild(NodoSub);
+            root.AppendChild(nodoFecha);
+            // Ruta Descargas
+            string downloads = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                "Downloads"
+            );
+
+            string filePath = Path.Combine(downloads, "ElectronicosJB.xml");
+
+            // Guardar archivo
+            xmlDoc.Save(filePath);
+
+            Console.WriteLine("XML guardado en: " + filePath);
+
+        }
+        
+        
         #region PDF
         private void PrintPage(object sender, PrintPageEventArgs e)
         {
@@ -145,28 +212,11 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             ObtenerDolar();
-            creadDoc();
+            // creadDoc();
+            XMLGenericoElectronico();
             GuardarEnDescargas();
-            /////Firma
-            //pbfirmaUsuario.Image.Save("firma.png", System.Drawing.Imaging.ImageFormat.Png);
-            //this.GuardarEnDescargas();
-            //////Firma obtenida
-            //OpenFileDialog abrir = new OpenFileDialog();
-            //abrir.Filter = "Imagenes|*.png;*.jpg;*.jpeg;*.bmp";
-
-            //if (abrir.ShowDialog() == DialogResult.OK)
-            //{
-            //    // Mostrar en PictureBox
-            //    using (var temp = new Bitmap(abrir.FileName))
-            //    {
-            //        pbfirmaUsuario.Image = new Bitmap(temp);
-            //    }
-
-            //    // Guardar en byte[]
-            //    firmaBytes = ObtenerBytesDesdeArchivo(abrir.FileName);
-
-            /////Crer FActura Detalle y encabezado
-
+            XmlLoadList();
+         
 
         }
 
@@ -443,12 +493,27 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
             if (abrir.ShowDialog() == DialogResult.OK)
             {
                 tstxtRutaArchivoCorreo.Text = abrir.FileName;
+
+                
+
             }
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lsbXml_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void lsbXml_Click(object sender, EventArgs e)
+        {
+    
         }
     } 
 }

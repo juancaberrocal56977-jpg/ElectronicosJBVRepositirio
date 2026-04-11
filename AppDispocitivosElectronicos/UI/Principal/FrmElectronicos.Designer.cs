@@ -91,7 +91,7 @@
             this.sToolStripMenuItem3,
             this.tsmiAcercaDeInfo,
             this.segToolStripMenuItem});
-            this.toolStripSplitButton1.Image = global::UTN.Winform.Electronicos.Properties.Resources.windows_17894;
+           /// this.toolStripSplitButton1.Image = global::UTN.Winform.Electronicos.Properties.Resources.windows_17894;
             this.toolStripSplitButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
