@@ -43,7 +43,7 @@
             // 
             this.sttBarraInferior.Location = new System.Drawing.Point(0, 328);
             this.sttBarraInferior.Name = "sttBarraInferior";
-            this.sttBarraInferior.Size = new System.Drawing.Size(567, 22);
+            this.sttBarraInferior.Size = new System.Drawing.Size(605, 22);
             this.sttBarraInferior.TabIndex = 15;
             this.sttBarraInferior.Text = "statusStrip1";
             // 
@@ -55,7 +55,7 @@
             this.toolStripBtnSalir});
             this.tspBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.tspBarraSuperior.Name = "tspBarraSuperior";
-            this.tspBarraSuperior.Size = new System.Drawing.Size(567, 55);
+            this.tspBarraSuperior.Size = new System.Drawing.Size(605, 55);
             this.tspBarraSuperior.TabIndex = 14;
             this.tspBarraSuperior.Text = "toolStrip1";
             // 
@@ -102,7 +102,7 @@
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Location = new System.Drawing.Point(0, 101);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(554, 189);
+            this.dgvDatos.Size = new System.Drawing.Size(593, 189);
             this.dgvDatos.TabIndex = 12;
             this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellClick);
             // 
@@ -111,7 +111,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(567, 350);
+            this.ClientSize = new System.Drawing.Size(605, 350);
             this.Controls.Add(this.sttBarraInferior);
             this.Controls.Add(this.tspBarraSuperior);
             this.Controls.Add(this.txtFiltro);

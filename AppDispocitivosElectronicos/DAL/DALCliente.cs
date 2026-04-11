@@ -85,7 +85,7 @@ namespace UTN.Winform.Electronicos.DAL
                         Cliente oCliente = new Cliente();
                         oCliente.Codigo = dr["Codigo"].ToString();
                         oCliente.Nombre = dr["Nombre"].ToString();
-                        oCliente.Apellido = dr["Apellido"].ToString();
+                        oCliente.Apellido1 = dr["Apellido"].ToString();
                         oCliente.Apellido2 = dr["Apellido2"].ToString();
                         oCliente.Correo = dr["Correo"].ToString();
                         oCliente.Direccion = dr["Direccion"].ToString();
@@ -141,7 +141,7 @@ namespace UTN.Winform.Electronicos.DAL
                             Cliente oCliente = new Cliente();
                             oCliente.Codigo = dr["Codigo"].ToString();
                             oCliente.Nombre = dr["Nombre"].ToString();
-                            oCliente.Apellido = dr["Apellido"].ToString();
+                            oCliente.Apellido1 = dr["Apellido"].ToString();
                             oCliente.Apellido2 = dr["Apellido2"].ToString();
                             oCliente.Correo = dr["Correo"].ToString();
                             oCliente.Direccion = dr["Direccion"].ToString();
@@ -201,7 +201,7 @@ namespace UTN.Winform.Electronicos.DAL
                         Cliente oCliente = new Cliente();
                         oCliente.Codigo = dr["Codigo"].ToString();
                         oCliente.Nombre = dr["Nombre"].ToString();
-                        oCliente.Apellido = dr["Apellido"].ToString();
+                        oCliente.Apellido1 = dr["Apellido"].ToString();
                         oCliente.Apellido2 = dr["Apellido2"].ToString();
                         oCliente.Correo = dr["Correo"].ToString();
                         oCliente.Direccion = dr["Direccion"].ToString();
@@ -259,7 +259,7 @@ namespace UTN.Winform.Electronicos.DAL
 
                         oCliente.Codigo = dr["Codigo"].ToString();
                         oCliente.Nombre = dr["Nombre"].ToString();
-                        oCliente.Apellido = dr["Apellido"].ToString();
+                        oCliente.Apellido1 = dr["Apellido"].ToString();
                         oCliente.Apellido2 = dr["Apellido2"].ToString();
                         oCliente.Correo = dr["Correo"].ToString();
                         oCliente.Direccion = dr["Direccion"].ToString();
@@ -301,7 +301,7 @@ namespace UTN.Winform.Electronicos.DAL
             {
                 command.Parameters.AddWithValue("@Codigo", pCliente.Codigo);
                 command.Parameters.AddWithValue("@Nombre", pCliente.Nombre);
-                command.Parameters.AddWithValue("@Apellido", pCliente.Apellido);
+                command.Parameters.AddWithValue("@Apellido", pCliente.Apellido1);
                 command.Parameters.AddWithValue("@Apellido2", pCliente.Apellido2);
                 command.Parameters.AddWithValue("@Coreo", pCliente.Correo);
                 command.Parameters.AddWithValue("@Direccion", pCliente.Direccion);
@@ -351,7 +351,7 @@ namespace UTN.Winform.Electronicos.DAL
             {
                 command.Parameters.AddWithValue("@Codigo", pCliente.Codigo);
                 command.Parameters.AddWithValue("@Nombre", pCliente.Nombre);
-                command.Parameters.AddWithValue("@Apellido", pCliente.Apellido);
+                command.Parameters.AddWithValue("@Apellido", pCliente.Apellido1);
                 command.Parameters.AddWithValue("@Apellido2", pCliente.Apellido2);
                 command.Parameters.AddWithValue("@Coreo", pCliente.Correo);
                 command.Parameters.AddWithValue("@Direccion", pCliente.Direccion);

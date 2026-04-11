@@ -11,7 +11,7 @@ namespace UTN.Winform.Electronicos.Entidades
     {
         public string Codigo { set; get; }
         public string Nombre { set; get; }
-        public string Apellido { set; get; }
+        public string Apellido1 { set; get; }
         public string Apellido2 { set; get; }
         public string Correo { set; get; }
         public string Direccion { set; get; }
