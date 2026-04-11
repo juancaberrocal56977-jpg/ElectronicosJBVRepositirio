@@ -59,7 +59,7 @@ namespace UTN.Winform.Electronicos.UI.Mantenimientos
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             BLLMarca marca = new BLLMarca();
-            Marca marca1 = new Marca();
+            Marcas marca1 = new Marcas();
 
 
             marca1.Codigo=txtCod.Text;
@@ -85,13 +85,13 @@ namespace UTN.Winform.Electronicos.UI.Mantenimientos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Marca oMarcObj = null;
+            Marcas oMarcObj = null;
 
             if (this.dgvInfoShow.SelectedRows.Count > 0)
             {
                 // Cambiar de estado
 
-                oMarcObj = this.dgvInfoShow.SelectedRows[0].DataBoundItem as Marca;
+                oMarcObj = this.dgvInfoShow.SelectedRows[0].DataBoundItem as Marcas;
                 this.txtCod.Text = oMarcObj.Codigo;
                 this.txtDesc.Text = oMarcObj.Descripcion;
 

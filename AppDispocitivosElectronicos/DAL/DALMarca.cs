@@ -12,7 +12,7 @@ namespace UTN.Winform.Electronicos.DAL
 {
     class DALMarca
     {
-        public void Editar(Marca pMarca)
+        public void Editar(Marcas pMarca)
         {
             using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection()))
             {
@@ -42,7 +42,7 @@ namespace UTN.Winform.Electronicos.DAL
             }
         }
 
-        public void Insertar(Marca pMarca)
+        public void Insertar(Marcas pMarca)
         {
             using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection()))
             {
@@ -57,7 +57,7 @@ namespace UTN.Winform.Electronicos.DAL
             }
         }
 
-        public Marca SeleccionarPorId(string id)
+        public Marcas SeleccionarPorId(string id)
         {
             using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection()))
             {
@@ -70,7 +70,7 @@ namespace UTN.Winform.Electronicos.DAL
                 // Read retorna true si hay resultados              
                 while (dr.Read())
                 {
-                    Marca oMarcas = new Marca();
+                    Marcas oMarcas = new Marcas();
 
                     oMarcas.Codigo = dr["Codigo"].ToString();
                     oMarcas.Descripcion = dr["Descripcion"].ToString();
@@ -83,7 +83,7 @@ namespace UTN.Winform.Electronicos.DAL
             }
         }
 
-        public List<Marca> SeleccionarTodos()
+        public List<Marcas> SeleccionarTodos()
         {
             using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection()))
             {
@@ -91,12 +91,12 @@ namespace UTN.Winform.Electronicos.DAL
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = @"usp_SELECT_Marca_All";
 
-                List<Marca> lista = new List<Marca>();
+                List<Marcas> lista = new List<Marcas>();
                 var reader = db.ExecuteReader(command);
                 // Read retorna true si hay resultados              
                 while (reader.Read())
                 {
-                    Marca marcaObj = new Marca();
+                    Marcas marcaObj = new Marcas();
                     marcaObj.Codigo = reader["Codigo"].ToString();
                     marcaObj.Descripcion = reader["Descripcion"].ToString();
                  

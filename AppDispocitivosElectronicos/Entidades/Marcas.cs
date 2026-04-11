@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UTN.Winform.Electronicos.Entidades
 {
-    internal class Marca
+    internal class Marcas
     {
         public string Codigo { set; get; }
         public string Descripcion { set; get; }

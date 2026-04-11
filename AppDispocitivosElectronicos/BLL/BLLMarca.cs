@@ -16,7 +16,7 @@ namespace UTN.Winform.Electronicos.BLL
             dal.Eliminar(id);
         }
 
-        public void Gueardar(Marca pMarca)
+        public void Gueardar(Marcas pMarca)
         {
             if (pMarca == null)
                 throw new ArgumentNullException("No puede ser null");
@@ -36,15 +36,15 @@ namespace UTN.Winform.Electronicos.BLL
             }
         }
 
-        public Marca SeleccionarPorId(string id)
+        public Marcas SeleccionarPorId(string id)
         {
             DALMarca dal = new DALMarca();
             return dal.SeleccionarPorId(id);
         }
 
-        public List<Marca> SeleccionarTodos()
+        public List<Marcas> SeleccionarTodos()
         {
-            var lista = new List<Marca>();
+            var lista = new List<Marcas>();
 
             DALMarca dal = new DALMarca();
             lista = dal.SeleccionarTodos();
