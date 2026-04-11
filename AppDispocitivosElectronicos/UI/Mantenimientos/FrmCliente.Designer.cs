@@ -70,9 +70,9 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(121, 44);
+            this.txtNombre.Location = new System.Drawing.Point(120, 44);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(150, 29);
+            this.txtNombre.Size = new System.Drawing.Size(147, 29);
             this.txtNombre.TabIndex = 22;
             // 
             // lblDes
@@ -88,9 +88,9 @@
             // txtCod
             // 
             this.txtCod.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(121, 6);
+            this.txtCod.Location = new System.Drawing.Point(120, 6);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(150, 29);
+            this.txtCod.Size = new System.Drawing.Size(147, 29);
             this.txtCod.TabIndex = 20;
             // 
             // lblCod
@@ -203,9 +203,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(121, 123);
+            this.textBox1.Location = new System.Drawing.Point(120, 123);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 29);
+            this.textBox1.Size = new System.Drawing.Size(147, 29);
             this.textBox1.TabIndex = 26;
             // 
             // label1
@@ -221,9 +221,9 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(121, 82);
+            this.textBox2.Location = new System.Drawing.Point(120, 82);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 29);
+            this.textBox2.Size = new System.Drawing.Size(147, 29);
             this.textBox2.TabIndex = 24;
             // 
             // label2
@@ -239,9 +239,9 @@
             // txtApellido2
             // 
             this.txtApellido2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido2.Location = new System.Drawing.Point(121, 209);
+            this.txtApellido2.Location = new System.Drawing.Point(120, 209);
             this.txtApellido2.Name = "txtApellido2";
-            this.txtApellido2.Size = new System.Drawing.Size(150, 29);
+            this.txtApellido2.Size = new System.Drawing.Size(147, 29);
             this.txtApellido2.TabIndex = 30;
             // 
             // label3
@@ -257,9 +257,9 @@
             // txtApellido1
             // 
             this.txtApellido1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido1.Location = new System.Drawing.Point(121, 166);
+            this.txtApellido1.Location = new System.Drawing.Point(120, 166);
             this.txtApellido1.Name = "txtApellido1";
-            this.txtApellido1.Size = new System.Drawing.Size(150, 29);
+            this.txtApellido1.Size = new System.Drawing.Size(147, 29);
             this.txtApellido1.TabIndex = 28;
             // 
             // label4
@@ -275,9 +275,9 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(121, 254);
+            this.textBox5.Location = new System.Drawing.Point(120, 254);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 29);
+            this.textBox5.Size = new System.Drawing.Size(147, 29);
             this.textBox5.TabIndex = 32;
             // 
             // label5
@@ -298,7 +298,7 @@
             this.pbImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbImagen.Location = new System.Drawing.Point(735, 89);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(106, 121);
+            this.pbImagen.Size = new System.Drawing.Size(131, 121);
             this.pbImagen.TabIndex = 33;
             this.pbImagen.TabStop = false;
             this.pbImagen.Click += new System.EventHandler(this.pbImagen_Click);
@@ -311,7 +311,7 @@
             this.tlpControlesCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.92635F));
             this.tlpControlesCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.07365F));
             this.tlpControlesCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
-            this.tlpControlesCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 218F));
+            this.tlpControlesCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
             this.tlpControlesCliente.Controls.Add(this.textBox5, 1, 6);
             this.tlpControlesCliente.Controls.Add(this.textBox11, 3, 2);
             this.tlpControlesCliente.Controls.Add(this.label9, 2, 2);
@@ -348,7 +348,7 @@
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(489, 82);
+            this.textBox11.Location = new System.Drawing.Point(485, 82);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(205, 29);
             this.textBox11.TabIndex = 24;
@@ -357,7 +357,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(280, 79);
+            this.label9.Location = new System.Drawing.Point(276, 79);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(157, 22);
             this.label9.TabIndex = 23;
@@ -367,7 +367,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(280, 41);
+            this.label12.Location = new System.Drawing.Point(276, 41);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 22);
             this.label12.TabIndex = 21;
@@ -375,7 +375,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(489, 44);
+            this.numericUpDown1.Location = new System.Drawing.Point(485, 44);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(205, 22);
             this.numericUpDown1.TabIndex = 25;
@@ -384,7 +384,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(280, 3);
+            this.label6.Location = new System.Drawing.Point(276, 3);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 22);
             this.label6.TabIndex = 19;
