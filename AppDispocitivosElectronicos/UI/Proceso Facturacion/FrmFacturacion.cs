@@ -18,12 +18,16 @@ using UTN.Winform.Electronicos.Entidades;
 using log4net;
 using UTN.Winform.Electronicos.Utils;
 using System.Reflection;
+using System.Drawing.Printing;
+using System.Net.NetworkInformation;
 
 namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
 {
     public partial class FrmFacturacion : Form
     {
-
+        PrintDocument printDoc = new PrintDocument();
+        string facturaTexto = "";
+        string rutaPDF = "";
         private static readonly ILog _myLogControlEventos =
   log4net.LogManager.GetLogger("MyControlEventos");
         private bool dibujando = false;
@@ -45,7 +49,48 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
             ObtenerDolar();
             Firmar();
         }
-    
+        #region PDF
+        private void PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font font = new Font("Courier New", 12);
+            Brush brush = Brushes.Black;
+
+            e.Graphics.DrawString(facturaTexto, font, brush, 100, 100);
+        }
+        public void creadDoc()
+        {
+            string cliente = "Juan";
+            string producto = "Name";
+            string cantidad = 1.ToString();
+            string precio = 1000.ToString();
+
+            double total = Convert.ToInt16(cantidad) * Convert.ToDouble(precio);
+
+            string fecha = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+
+            facturaTexto =
+                "         FACTURA\n" +
+                "---------------------------------\n" +
+                "Cliente: " + cliente + "\n" +
+                "Producto: " + producto + "\n" +
+                "Cantidad: " + cantidad + "\n" +
+                "Precio: $" + precio + "\n" +
+                "---------------------------------\n" +
+                "TOTAL: $" + total + "\n";
+
+            printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
+
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDoc;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDoc.Print();
+            }
+        }
+
+
+        #endregion
         public void GridInfo()
         {
 
@@ -100,6 +145,7 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             ObtenerDolar();
+            creadDoc();
             GuardarEnDescargas();
             /////Firma
             //pbfirmaUsuario.Image.Save("firma.png", System.Drawing.Imaging.ImageFormat.Png);
