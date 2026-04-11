@@ -84,7 +84,7 @@
             this.dgvInfoShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoShow.Location = new System.Drawing.Point(12, 97);
             this.dgvInfoShow.Name = "dgvInfoShow";
-            this.dgvInfoShow.Size = new System.Drawing.Size(419, 194);
+            this.dgvInfoShow.Size = new System.Drawing.Size(419, 214);
             this.dgvInfoShow.TabIndex = 18;
             // 
             // tlpOpcionesBotones
