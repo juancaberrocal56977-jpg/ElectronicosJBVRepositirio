@@ -12,6 +12,6 @@ namespace UTN.Winform.Electronicos.Entidades.DTO
         public string NombreCompleto { set; get; }
         public string Telefono { set; get; }
         public int Edad { set; get; }
-
+          
     }
 }
