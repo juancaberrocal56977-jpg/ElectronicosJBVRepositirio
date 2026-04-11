@@ -8,6 +8,7 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     internal class Productos
     {
+        #region Datos
         public string Codigo { set; get; }
         public string Nombre { set; get; }
         public string CodTipoDispositivo { set; get; }
@@ -23,6 +24,6 @@ namespace UTN.Winform.Electronicos.Entidades
         public byte[] DocumentoEspecificaciones { set; get; }
         public byte[] CogigoBarra { set; get; }
 
-
+        #endregion
     }
 }
