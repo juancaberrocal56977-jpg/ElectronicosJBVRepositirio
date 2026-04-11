@@ -16,6 +16,7 @@ namespace UTN.Winform.Electronicos.Exeptions
 
             StringBuilder msg = new StringBuilder();
             int index = 0;
+        
             msg.AppendFormat("\nClase        :{0}\n", pMethodBase.DeclaringType);
             msg.AppendFormat("Method         :{0}\n", pMethodBase.Name);
             msg.AppendFormat("Message        :{0}\n", pException.Message);
@@ -54,6 +55,7 @@ namespace UTN.Winform.Electronicos.Exeptions
         {
             StringBuilder msg = new StringBuilder();
 
+
             msg.AppendFormat("\nClase: {0}\n", pMethodBase.DeclaringType);
             msg.AppendFormat("Method: {0}\n", pMethodBase.Name);
             msg.AppendFormat("\n");
@@ -91,6 +93,7 @@ namespace UTN.Winform.Electronicos.Exeptions
                 case 110:
                     msg += "Error hay menos columnas en el INSERT que los parámetros que se envían ";
                     break;
+            
                 case 113:
                     msg += "Error con comentarios ";
                     break;
@@ -142,6 +145,7 @@ namespace UTN.Winform.Electronicos.Exeptions
         {
             StringBuilder msg = new StringBuilder();
 
+         
             msg.AppendFormat("\n");
             msg.AppendFormat("Lista de Errores \n");
             for (int i = 0; i < pExcepcion.Errors.Count; i++)
