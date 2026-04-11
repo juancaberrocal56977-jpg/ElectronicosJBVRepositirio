@@ -64,6 +64,7 @@
             this.tsbtnBuscarProducto = new System.Windows.Forms.ToolStripButton();
             this.tstxtRutaArchivoCorreo = new System.Windows.Forms.ToolStripTextBox();
             this.gbEncabezado = new System.Windows.Forms.GroupBox();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.label19 = new System.Windows.Forms.Label();
             this.lsbXml = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -90,7 +91,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pbfirmaUsuario = new System.Windows.Forms.PictureBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.txtRutaPdf = new System.Windows.Forms.ToolStripTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoShow)).BeginInit();
             this.tlpOpcionesBotones.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -416,7 +417,8 @@
             this.tsbtnBuscarCliente,
             this.tsbtnBuscarProducto,
             this.toolStripButton1,
-            this.tstxtRutaArchivoCorreo});
+            this.tstxtRutaArchivoCorreo,
+            this.txtRutaPdf});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1126, 51);
@@ -500,6 +502,14 @@
             this.gbEncabezado.TabIndex = 34;
             this.gbEncabezado.TabStop = false;
             this.gbEncabezado.Text = "Encabezado";
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(6, 246);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
+            this.webBrowser1.TabIndex = 63;
             // 
             // label19
             // 
@@ -747,13 +757,13 @@
             this.pbfirmaUsuario.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbfirmaUsuario_MouseMove);
             this.pbfirmaUsuario.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbfirmaUsuario_MouseUp);
             // 
-            // webBrowser1
+            // txtRutaPdf
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(6, 246);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
-            this.webBrowser1.TabIndex = 63;
+            this.txtRutaPdf.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtRutaPdf.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRutaPdf.Name = "txtRutaPdf";
+            this.txtRutaPdf.Size = new System.Drawing.Size(100, 51);
+            this.txtRutaPdf.Click += new System.EventHandler(this.txtRutaPdf_Click);
             // 
             // FrmFacturacion
             // 
@@ -856,5 +866,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslDolar;
         private System.Windows.Forms.ToolStripTextBox tstxtRutaArchivoCorreo;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.ToolStripTextBox txtRutaPdf;
     }
 }

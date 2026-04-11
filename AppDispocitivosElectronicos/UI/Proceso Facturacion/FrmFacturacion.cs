@@ -54,6 +54,33 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
             Firmar();
         }
 
+        public void EnviarArchivosGmail1()
+        {
+
+            using (MailMessage correo = new MailMessage())
+            {
+                correo.From = new MailAddress("juancaberrocal56977@gmail.com");
+                correo.To.Add("juancaberrocal56977@gmail.com");
+                correo.Subject = "XMLs";
+                correo.Body = "Adjunto archivos XML";
+
+                correo.Attachments.Add(new Attachment(tstxtRutaArchivoCorreo.Text));
+                correo.Attachments.Add(new Attachment(txtRutaPdf.Text));
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential(
+                        "juancaberrocal56977@gmail.com",
+                        "gvqn ivny qdez xkdd"
+                    );
+                    smtp.EnableSsl = true;
+
+                    smtp.Send(correo);
+                }
+            }
+        }
+
+
         public void XmlLoadList()
         {
 
@@ -213,10 +240,10 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
         {
             ObtenerDolar();
             // creadDoc();
-            XMLGenericoElectronico();
+        //    XMLGenericoElectronico();
             GuardarEnDescargas();
-            XmlLoadList();
-         
+            //XmlLoadList();
+            EnviarArchivosGmail1();
 
         }
 
@@ -514,6 +541,19 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
         private void lsbXml_Click(object sender, EventArgs e)
         {
     
+        }
+
+        private void txtRutaPdf_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog abrir = new OpenFileDialog();
+            abrir.Title = "Seleccionar archivo";
+            abrir.Filter = "Todos los archivos (*.*)|*.*";
+
+            if (abrir.ShowDialog() == DialogResult.OK)
+            {
+                txtRutaPdf.Text = abrir.FileName;
+
+            }
         }
     } 
 }
