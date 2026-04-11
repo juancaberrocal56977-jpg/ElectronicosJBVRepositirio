@@ -103,17 +103,17 @@
             // txtDesc
             // 
             this.txtDesc.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(115, 80);
+            this.txtDesc.Location = new System.Drawing.Point(101, 80);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(180, 22);
+            this.txtDesc.Size = new System.Drawing.Size(194, 22);
             this.txtDesc.TabIndex = 22;
             // 
             // txtCod
             // 
             this.txtCod.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(115, 54);
+            this.txtCod.Location = new System.Drawing.Point(101, 54);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(180, 22);
+            this.txtCod.Size = new System.Drawing.Size(194, 22);
             this.txtCod.TabIndex = 20;
             // 
             // dgvInfoShow
@@ -214,9 +214,9 @@
             // txtCodDispositivoD
             // 
             this.txtCodDispositivoD.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodDispositivoD.Location = new System.Drawing.Point(115, 107);
+            this.txtCodDispositivoD.Location = new System.Drawing.Point(101, 107);
             this.txtCodDispositivoD.Name = "txtCodDispositivoD";
-            this.txtCodDispositivoD.Size = new System.Drawing.Size(180, 22);
+            this.txtCodDispositivoD.Size = new System.Drawing.Size(194, 22);
             this.txtCodDispositivoD.TabIndex = 24;
             this.txtCodDispositivoD.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -225,18 +225,18 @@
             this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(115, 187);
+            this.textBox3.Location = new System.Drawing.Point(101, 187);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 22);
+            this.textBox3.Size = new System.Drawing.Size(194, 22);
             this.textBox3.TabIndex = 30;
             this.textBox3.Text = "13";
             // 
             // txtPrecioD
             // 
             this.txtPrecioD.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioD.Location = new System.Drawing.Point(115, 161);
+            this.txtPrecioD.Location = new System.Drawing.Point(101, 161);
             this.txtPrecioD.Name = "txtPrecioD";
-            this.txtPrecioD.Size = new System.Drawing.Size(180, 22);
+            this.txtPrecioD.Size = new System.Drawing.Size(194, 22);
             this.txtPrecioD.TabIndex = 28;
             // 
             // statusStrip1
@@ -284,9 +284,9 @@
             // 
             // nudCantidadD
             // 
-            this.nudCantidadD.Location = new System.Drawing.Point(115, 135);
+            this.nudCantidadD.Location = new System.Drawing.Point(101, 135);
             this.nudCantidadD.Name = "nudCantidadD";
-            this.nudCantidadD.Size = new System.Drawing.Size(180, 22);
+            this.nudCantidadD.Size = new System.Drawing.Size(194, 22);
             this.nudCantidadD.TabIndex = 35;
             // 
             // label17
@@ -312,17 +312,17 @@
             // txtPrecioTotal
             // 
             this.txtPrecioTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioTotal.Location = new System.Drawing.Point(115, 242);
+            this.txtPrecioTotal.Location = new System.Drawing.Point(101, 242);
             this.txtPrecioTotal.Name = "txtPrecioTotal";
-            this.txtPrecioTotal.Size = new System.Drawing.Size(180, 22);
+            this.txtPrecioTotal.Size = new System.Drawing.Size(194, 22);
             this.txtPrecioTotal.TabIndex = 34;
             // 
             // textBox18
             // 
             this.textBox18.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(115, 215);
+            this.textBox18.Location = new System.Drawing.Point(101, 215);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(180, 22);
+            this.textBox18.Size = new System.Drawing.Size(194, 22);
             this.textBox18.TabIndex = 32;
             // 
             // lblCod

@@ -178,11 +178,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="UI\Filtros\FrmClienteFiltros.cs">
+    <Compile Include="UI\Filtros\FrmClienteFiltro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Filtros\FrmClienteFiltros.Designer.cs">
-      <DependentUpon>FrmClienteFiltros.cs</DependentUpon>
+      <DependentUpon>FrmClienteFiltro.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Filtros\FrmFiltroProducto.cs">
       <SubType>Form</SubType>
@@ -250,11 +250,11 @@
     <Compile Include="UI\Mantenimientos\FrmTipo.Designer.cs">
       <DependentUpon>FrmTipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Principal\FrmDolar.cs">
+    <Compile Include="UI\Principal\FrmDolarValor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Principal\FrmDolar.Designer.cs">
-      <DependentUpon>FrmDolar.cs</DependentUpon>
+    <Compile Include="UI\Principal\FrmDolarValor.Designer.cs">
+      <DependentUpon>FrmDolarValor.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Principal\FrmElectronicos.cs">
       <SubType>Form</SubType>
@@ -290,7 +290,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Filtros\FrmClienteFiltros.resx">
-      <DependentUpon>FrmClienteFiltros.cs</DependentUpon>
+      <DependentUpon>FrmClienteFiltro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Filtros\FrmFiltroProducto.resx">
       <DependentUpon>FrmFiltroProducto.cs</DependentUpon>
@@ -325,8 +325,8 @@
     <EmbeddedResource Include="UI\Mantenimientos\FrmTipo.resx">
       <DependentUpon>FrmTipo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Principal\FrmDolar.resx">
-      <DependentUpon>FrmDolar.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Principal\FrmDolarValor.resx">
+      <DependentUpon>FrmDolarValor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Principal\FrmElectronicos.resx">
       <DependentUpon>FrmElectronicos.cs</DependentUpon>
