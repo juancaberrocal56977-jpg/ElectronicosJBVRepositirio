@@ -8,9 +8,9 @@ namespace UTN.Winform.Electronicos.Entidades.DTO
 {
     public class PadronDTO
     {
-        public string nombre { get; set; }
-        public string tipoIdentificacion { get; set; }
-        public Regimen regimen { get; set; }
+        public string nombre { get; set; } 
+        public string tipoIdentificacion{ get; set; }
+        public Regimen regimen {get; set; }
         public Situacion situacion { get; set; }
         public object[] actividades { get; set; }
     }
@@ -19,7 +19,7 @@ namespace UTN.Winform.Electronicos.Entidades.DTO
     {
         public int codigo { get; set; }
         public string descripcion { get; set; }
-    }
+    } 
 
     public class Situacion
     {
