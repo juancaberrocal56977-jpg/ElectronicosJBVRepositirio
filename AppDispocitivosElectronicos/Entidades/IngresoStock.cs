@@ -8,6 +8,7 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     internal class IngresoStock
     {
+
         public string CodigoStock { set; get; }
         public string Cantidad { set; get; }
         public int CodFactura { set; get; }
@@ -17,7 +18,7 @@ namespace UTN.Winform.Electronicos.Entidades
         public string CodigoProducto { set; get; }
         public string TipoEntradaSalida { set; get; }
         public byte[] Documento { set; get; }
-
+        ///Falta las salidas
 
     }
 }
