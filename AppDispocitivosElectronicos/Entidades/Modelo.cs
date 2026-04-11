@@ -8,8 +8,10 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     internal class Modelo
     {
+        #region Datos 
         public string Codigo { set; get; }
-        public string Descripcion { set; get; }
 
+        public string Descripcion { set; get; }
+        #endregion
     }
 }
