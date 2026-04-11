@@ -8,6 +8,7 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     internal class DetalleFactura
     {
+
         public int Codigo { set; get; }
         public int CodFacturaEnc { set; get; }
         public string CodDispositivo { set; get; }
@@ -15,7 +16,7 @@ namespace UTN.Winform.Electronicos.Entidades
         public double Precio { set; get; }
         public double SubTotal { set; get; }
         public double Impuesto { set; get; }
-        public double PrecioTotal { set; get; }
+        public double PrecioTotal { set; get; }  
 
 
 

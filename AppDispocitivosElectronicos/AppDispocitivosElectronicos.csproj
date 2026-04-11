@@ -159,7 +159,7 @@
     <Compile Include="Entidades\EncabezadoFactura.cs" />
     <Compile Include="Entidades\Impuesto.cs" />
     <Compile Include="Entidades\IngresoStock.cs" />
-    <Compile Include="Entidades\Marca.cs" />
+    <Compile Include="Entidades\Marcas.cs" />
     <Compile Include="Entidades\Modelo.cs" />
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="Entidades\Provincia.cs" />
