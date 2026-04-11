@@ -34,6 +34,7 @@ namespace UTN.Winform.Electronicos.UI.Mantenimientos
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
