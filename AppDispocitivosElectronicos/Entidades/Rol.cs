@@ -8,7 +8,7 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     internal class Rol
     {
-        public int IdRol { set; get; }
+        public int IdRol{ set; get; }
         public string DescripcionRol { set; get; }
 
     }
