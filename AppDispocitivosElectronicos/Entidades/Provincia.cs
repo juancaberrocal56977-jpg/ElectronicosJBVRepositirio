@@ -10,6 +10,6 @@ namespace UTN.Winform.Electronicos.Entidades
     {
         public int IdProvincia { set; get; }
         public string Descripcion { set; get; }
-       public override string ToString() => IdProvincia + " " + Descripcion;
+       public override string ToString() => IdProvincia + " " + Descripcion ;
     }
 }
