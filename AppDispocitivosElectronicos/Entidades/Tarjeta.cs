@@ -8,8 +8,8 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     class Tarjeta
     {
-        public string Codigo { set; get; }
-        public string Descripcion { set; get; }
+        public string Codigo{ set; get; }
+        public string Descripcion{ set; get; }
 
     }
 }
