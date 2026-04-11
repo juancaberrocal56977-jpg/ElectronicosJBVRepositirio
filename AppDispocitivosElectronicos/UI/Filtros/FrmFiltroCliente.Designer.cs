@@ -1,6 +1,6 @@
 ﻿namespace UTN.Winform.Electronicos.UI.Filtros
 {
-    partial class FrmClienteFiltro
+    partial class FrmFiltroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -41,10 +41,10 @@
             // 
             // sttBarraInferior
             // 
-            this.sttBarraInferior.Location = new System.Drawing.Point(0, 328);
+            this.sttBarraInferior.Location = new System.Drawing.Point(0, 370);
             this.sttBarraInferior.Name = "sttBarraInferior";
-            this.sttBarraInferior.Size = new System.Drawing.Size(605, 22);
-            this.sttBarraInferior.TabIndex = 15;
+            this.sttBarraInferior.Size = new System.Drawing.Size(503, 22);
+            this.sttBarraInferior.TabIndex = 19;
             this.sttBarraInferior.Text = "statusStrip1";
             // 
             // tspBarraSuperior
@@ -55,8 +55,8 @@
             this.toolStripBtnSalir});
             this.tspBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.tspBarraSuperior.Name = "tspBarraSuperior";
-            this.tspBarraSuperior.Size = new System.Drawing.Size(605, 55);
-            this.tspBarraSuperior.TabIndex = 14;
+            this.tspBarraSuperior.Size = new System.Drawing.Size(503, 55);
+            this.tspBarraSuperior.TabIndex = 18;
             this.tspBarraSuperior.Text = "toolStrip1";
             // 
             // toolStripBtnNuevo
@@ -91,34 +91,34 @@
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(0, 75);
+            this.txtFiltro.Location = new System.Drawing.Point(12, 73);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(554, 20);
-            this.txtFiltro.TabIndex = 13;
+            this.txtFiltro.Size = new System.Drawing.Size(449, 26);
+            this.txtFiltro.TabIndex = 17;
             // 
             // dgvDatos
             // 
             this.dgvDatos.AllowUserToAddRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(0, 101);
+            this.dgvDatos.Location = new System.Drawing.Point(22, 122);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(593, 189);
-            this.dgvDatos.TabIndex = 12;
-            this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellClick);
+            this.dgvDatos.Size = new System.Drawing.Size(449, 212);
+            this.dgvDatos.TabIndex = 16;
             // 
-            // FrmClienteFiltros
+            // FrmFiltroCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(605, 350);
+            this.ClientSize = new System.Drawing.Size(503, 392);
             this.Controls.Add(this.sttBarraInferior);
             this.Controls.Add(this.tspBarraSuperior);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.dgvDatos);
-            this.Name = "FrmClienteFiltros";
-            this.Text = "FrmClienteFiltros";
-            this.Load += new System.EventHandler(this.FrmClienteFiltros_Load);
+            this.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FrmFiltroCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmFiltroCliente";
             this.tspBarraSuperior.ResumeLayout(false);
             this.tspBarraSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

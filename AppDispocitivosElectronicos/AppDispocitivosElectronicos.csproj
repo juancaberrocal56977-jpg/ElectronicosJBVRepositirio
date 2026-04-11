@@ -179,11 +179,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="UI\Filtros\FrmClienteFiltro.cs">
+    <Compile Include="UI\Filtros\FrmFiltroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Filtros\FrmClienteFiltros.Designer.cs">
-      <DependentUpon>FrmClienteFiltro.cs</DependentUpon>
+    <Compile Include="UI\Filtros\FrmFiltroCliente.Designer.cs">
+      <DependentUpon>FrmFiltroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Filtros\FrmFiltroProducto.cs">
       <SubType>Form</SubType>
@@ -290,8 +290,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Filtros\FrmClienteFiltros.resx">
-      <DependentUpon>FrmClienteFiltro.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Filtros\FrmFiltroCliente.resx">
+      <DependentUpon>FrmFiltroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Filtros\FrmFiltroProducto.resx">
       <DependentUpon>FrmFiltroProducto.cs</DependentUpon>

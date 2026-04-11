@@ -404,12 +404,5 @@ namespace UTN.Winform.Electronicos.UI.Proceso_Facturacion
         {
 
         }
-
-        public void PantillaPdfCrear() { 
-        }
-        private void tsbtnPDFCrear_Click(object sender, EventArgs e)
-        {
-
-        }
     } 
 }
