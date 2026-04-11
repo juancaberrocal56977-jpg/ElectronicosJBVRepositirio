@@ -53,7 +53,7 @@
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.Location = new System.Drawing.Point(6, 6);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(188, 68);
+            this.btnAceptar.Size = new System.Drawing.Size(159, 49);
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -64,9 +64,9 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::UTN.Winform.Electronicos.Properties.Resources.pencil_17925;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(6, 85);
+            this.btnEditar.Location = new System.Drawing.Point(6, 80);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(188, 64);
+            this.btnEditar.Size = new System.Drawing.Size(159, 51);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -77,9 +77,9 @@
             this.btnBorrar.BackColor = System.Drawing.Color.Transparent;
             this.btnBorrar.Image = global::UTN.Winform.Electronicos.Properties.Resources.cut_scissors_17842;
             this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrar.Location = new System.Drawing.Point(6, 162);
+            this.btnBorrar.Location = new System.Drawing.Point(6, 142);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(188, 70);
+            this.btnBorrar.Size = new System.Drawing.Size(159, 48);
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -90,9 +90,9 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
             this.btnLimpiar.Image = global::UTN.Winform.Electronicos.Properties.Resources.page_17914;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(6, 241);
+            this.btnLimpiar.Location = new System.Drawing.Point(6, 206);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(188, 70);
+            this.btnLimpiar.Size = new System.Drawing.Size(159, 54);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -103,9 +103,9 @@
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
             this.btnSalir.Image = global::UTN.Winform.Electronicos.Properties.Resources.exit_delete_17889;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(6, 325);
+            this.btnSalir.Location = new System.Drawing.Point(6, 269);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(188, 56);
+            this.btnSalir.Size = new System.Drawing.Size(159, 49);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -122,23 +122,23 @@
             this.tlpOpcionesBotones.Controls.Add(this.btnLimpiar, 0, 3);
             this.tlpOpcionesBotones.Controls.Add(this.btnBorrar, 0, 2);
             this.tlpOpcionesBotones.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlpOpcionesBotones.Location = new System.Drawing.Point(549, 13);
+            this.tlpOpcionesBotones.Location = new System.Drawing.Point(509, 2);
             this.tlpOpcionesBotones.Name = "tlpOpcionesBotones";
             this.tlpOpcionesBotones.RowCount = 5;
-            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.50505F));
-            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.49495F));
-            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.41177F));
+            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.58823F));
             this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tlpOpcionesBotones.Size = new System.Drawing.Size(200, 387);
+            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpOpcionesBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tlpOpcionesBotones.Size = new System.Drawing.Size(171, 324);
             this.tlpOpcionesBotones.TabIndex = 5;
             // 
             // dgvInfoShow
             // 
             this.dgvInfoShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfoShow.Location = new System.Drawing.Point(16, 188);
+            this.dgvInfoShow.Location = new System.Drawing.Point(12, 141);
             this.dgvInfoShow.Name = "dgvInfoShow";
-            this.dgvInfoShow.Size = new System.Drawing.Size(520, 212);
+            this.dgvInfoShow.Size = new System.Drawing.Size(491, 185);
             this.dgvInfoShow.TabIndex = 6;
             this.dgvInfoShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfoShow_CellContentClick);
             // 
@@ -214,7 +214,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 418);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(693, 337);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ckInactivo);
             this.Controls.Add(this.ckActivo);

@@ -40,7 +40,8 @@ namespace UTN.Winform.Electronicos.BLL
             IDALTipo datosTipo = new DALTipo();
             Task<TipoDispositivo> oObjTipo1 = null;
 
-            if (datosTipo.GetObjectByFilter(pdatos.Codigo) == null)
+            if (datosTipo.GetObjectById(pdatos.Codigo) == null)
+
                 oObjTipo1 = datosTipo.Save(pdatos);
             else
                 oObjTipo1 = datosTipo.Update(pdatos);

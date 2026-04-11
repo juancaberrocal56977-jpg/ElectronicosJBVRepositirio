@@ -121,8 +121,8 @@ namespace UTN.Winform.Electronicos.DAL
             string msg = "";
             try
             {
-                string sql = @" select * from  Cliente WITH (NOLOCK) 
-                                Where Nombre+Apellido1+Apellido2 like @filtro ";
+                string sql = @" select * from  TipoDispositivo WITH (NOLOCK) 
+                                Where Nombre+Codigo like @filtro ";
                 command.Parameters.AddWithValue("@filtro", pDescripcion);
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;
@@ -138,16 +138,12 @@ namespace UTN.Winform.Electronicos.DAL
                     // Iterar en todas las filas y Mapearlas
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        TipoDispositivo oCliente = new TipoDispositivo();
-                        //oCliente.IdCliente = dr["IdCliente"].ToString();
-                        //oCliente.Nombre = dr["Nombre"].ToString();
-                        //oCliente.Apellido1 = dr["Apellido1"].ToString();
-                        //oCliente.Apellido2 = dr["Apellido2"].ToString();
-                        //oCliente.FechaNacimiento = DateTime.Parse(dr["FechaNacimiento"].ToString());
-                        //oCliente.IdProvincia = (int)dr["IdProvincia"];
-                        //oCliente.Sexo = (int)dr["Sexo"];
+                        TipoDispositivo oTipoDispositivo = new TipoDispositivo();
+                        oTipoDispositivo.Codigo = dr["Codigo"].ToString();
+                        oTipoDispositivo.Nombre = dr["Nombre"].ToString();
+                        oTipoDispositivo.Estado = bool.Parse(dr["Estado"].ToString());
 
-                        lista.Add(oCliente);
+                        lista.Add(oTipoDispositivo);
                     }
                 }
 
