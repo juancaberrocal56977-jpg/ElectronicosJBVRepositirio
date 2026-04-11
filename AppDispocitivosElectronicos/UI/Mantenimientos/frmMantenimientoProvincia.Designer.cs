@@ -140,21 +140,21 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(479, 77);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(203, 20);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtProvincia
             // 
             this.txtProvincia.Location = new System.Drawing.Point(479, 119);
             this.txtProvincia.Name = "txtProvincia";
-            this.txtProvincia.Size = new System.Drawing.Size(100, 20);
+            this.txtProvincia.Size = new System.Drawing.Size(203, 20);
             this.txtProvincia.TabIndex = 6;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Image = global::UTN.Winform.Electronicos.Properties.Resources.Button_Ok_01_25121;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(596, 178);
+            this.btnAceptar.Location = new System.Drawing.Point(567, 178);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(155, 63);
             this.btnAceptar.TabIndex = 7;
