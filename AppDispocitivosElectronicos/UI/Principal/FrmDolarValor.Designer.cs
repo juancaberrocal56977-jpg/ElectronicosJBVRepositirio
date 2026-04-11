@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // FrmDolar
+            // FrmDolarValor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmDolar";
+            this.ClientSize = new System.Drawing.Size(400, 187);
+            this.Name = "FrmDolarValor";
             this.Text = "Juan Carlos Berrocal venegas";
             this.ResumeLayout(false);
 
