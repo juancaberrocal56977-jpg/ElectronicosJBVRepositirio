@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UTN.Winform.Electronicos.UI.Principal
 {
-    public partial class FrmDolar: Form
+    public partial class FrmDolarValor: Form
     {
-        public FrmDolar()
+        public FrmDolarValor()
         {
             InitializeComponent();
         }

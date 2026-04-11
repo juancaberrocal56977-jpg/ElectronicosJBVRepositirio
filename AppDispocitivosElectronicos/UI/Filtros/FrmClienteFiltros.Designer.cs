@@ -1,6 +1,6 @@
 ﻿namespace UTN.Winform.Electronicos.UI.Filtros
 {
-    partial class FrmClienteFiltros
+    partial class FrmClienteFiltro
     {
         /// <summary>
         /// Required designer variable.

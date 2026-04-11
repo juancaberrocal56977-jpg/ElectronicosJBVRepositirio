@@ -1,6 +1,6 @@
 ﻿namespace UTN.Winform.Electronicos.UI.Principal
 {
-    partial class FrmDolar
+    partial class FrmDolarValor
     {
         /// <summary>
         /// Required designer variable.
