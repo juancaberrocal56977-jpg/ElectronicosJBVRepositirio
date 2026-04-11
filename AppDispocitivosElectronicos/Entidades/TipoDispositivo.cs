@@ -8,9 +8,9 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     internal class TipoDispositivo
     {
-        public string Codigo { set; get; }
-        public string Nombre { set; get; }
-        public bool Estado { set; get; }
+        public string Codigo{ set; get; }
+        public string Nombre{ set; get; }
+        public bool Estado{ set; get; }
 
 
     }
