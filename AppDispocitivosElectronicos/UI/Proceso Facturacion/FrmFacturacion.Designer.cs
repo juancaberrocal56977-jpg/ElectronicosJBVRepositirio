@@ -90,6 +90,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pbfirmaUsuario = new System.Windows.Forms.PictureBox();
+            this.tsbtnPDFCrear = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoShow)).BeginInit();
             this.tlpOpcionesBotones.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -415,7 +416,8 @@
             this.tsbtnBuscarCliente,
             this.tsbtnBuscarProducto,
             this.toolStripButton1,
-            this.tstxtRutaArchivoCorreo});
+            this.tstxtRutaArchivoCorreo,
+            this.tsbtnPDFCrear});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1126, 51);
@@ -743,6 +745,17 @@
             this.pbfirmaUsuario.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbfirmaUsuario_MouseMove);
             this.pbfirmaUsuario.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbfirmaUsuario_MouseUp);
             // 
+            // tsbtnPDFCrear
+            // 
+            this.tsbtnPDFCrear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnPDFCrear.Image = global::UTN.Winform.Electronicos.Properties.Resources.misc_acrobat_pdf_15880;
+            this.tsbtnPDFCrear.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnPDFCrear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnPDFCrear.Name = "tsbtnPDFCrear";
+            this.tsbtnPDFCrear.Size = new System.Drawing.Size(36, 48);
+            this.tsbtnPDFCrear.Text = "Crear PDF ";
+            this.tsbtnPDFCrear.Click += new System.EventHandler(this.tsbtnPDFCrear_Click);
+            // 
             // FrmFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -843,5 +856,6 @@
         private System.Windows.Forms.PictureBox pbfirmaUsuario;
         private System.Windows.Forms.ToolStripStatusLabel tsslDolar;
         private System.Windows.Forms.ToolStripTextBox tstxtRutaArchivoCorreo;
+        private System.Windows.Forms.ToolStripButton tsbtnPDFCrear;
     }
 }
