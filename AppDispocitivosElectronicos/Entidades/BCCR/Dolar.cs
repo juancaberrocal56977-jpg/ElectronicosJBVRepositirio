@@ -9,7 +9,7 @@ namespace UTN.Winform.Electronicos.Entidades.BCCR
     class Dolar
     {
         public string Codigo { get; set; }
-        public DateTime Fecha { get; set; }
+        public DateTime Fecha { get; set;}
         public double Monto { get; set; }
     }
 }
