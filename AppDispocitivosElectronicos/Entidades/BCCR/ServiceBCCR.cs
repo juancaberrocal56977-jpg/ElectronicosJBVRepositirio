@@ -8,10 +8,12 @@ using UTN.Winform.Electronicos.BCCR;
 
 namespace UTN.Winform.Electronicos.Entidades.BCCR
 {
-    class ServiceBCCR
+    class ServiceBCCR 
     {//Agregar los credenciales para el uso del consumo API del Dolar BCCR 
         private readonly string TOKEN = "R9MOVE2OVE";
+
         private readonly string NOMBRE = "ROOSVELT";
+        
         private readonly string CORREO = "roswel030@gmail.com";
 
         public IEnumerable<Dolar> GetDolar(DateTime pFechaInicial, DateTime
@@ -39,6 +41,7 @@ System.Net.SecurityProtocolType.Tls12;
             wsindicadoreseconomicosSoapClient client = new
             wsindicadoreseconomicosSoapClient("wsindicadoreseconomicosSoap12");
             // Se invoca. 
+
             dataset = client.ObtenerIndicadoresEconomicos(tipoCompraoVenta,
 fecha_inicial, fecha_final, NOMBRE, "N", CORREO, TOKEN);
             //Se carga el taset 
