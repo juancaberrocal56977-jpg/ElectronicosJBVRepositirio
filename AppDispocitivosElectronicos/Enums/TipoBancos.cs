@@ -1,4 +1,4 @@
 ﻿enum BancosCR
 {
-    BAC,BN,BCR,Mutual,Ninguno
+    BAC+1,BN,BCR,Mutual,Ninguno
 }

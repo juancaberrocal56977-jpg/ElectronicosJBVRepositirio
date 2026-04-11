@@ -1,4 +1,4 @@
 ﻿enum EstadosMantenimientos
 {
-    Nuevo,Editar,Borrar,Ninguno
+    Nuevo,Editar,Borrar,Ninguno,Otros
 }

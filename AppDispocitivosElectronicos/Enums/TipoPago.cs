@@ -1,4 +1,4 @@
 ﻿enum TipoPago
 {
-    Efectivo,Sinpe,Tarjeta,TransferenciaBancaria,Emma
+    Efectivo=1,Sinpe,Tarjeta,TransferenciaBancaria,Emma 
 }
