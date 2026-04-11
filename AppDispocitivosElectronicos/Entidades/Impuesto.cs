@@ -8,5 +8,7 @@ namespace UTN.Winform.Electronicos.Entidades
 {
     internal class Impuesto
     {
+        public string Codigo { get; set; }
+        public float Porcentaje { get; set; } 
     }
 }
