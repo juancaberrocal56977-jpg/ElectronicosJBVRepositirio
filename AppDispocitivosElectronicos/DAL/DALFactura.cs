@@ -18,6 +18,23 @@ namespace UTN.Winform.Electronicos.DAL
     class DALFactura : IDALFactura
     {
         private static readonly ILog _MyLogControlEventos = LogManager.GetLogger("MyControlEventos");
+        public List<EncabezadoFactura> ObtenerFacturasPorRango(DateTime inicio, DateTime fin)
+        {
+            SqlCommand command = new SqlCommand();
+            string sqlReporte = "SELECT \r\n    f.CodigoFactura,\r\n  " +
+                "  f.FechaFacturacion,\r\n    f.CodCliente,\r\n    f.Total,\r\n " +
+                "   \r\n    d.Codigo,\r\n    d.CodDispositivo,\r\n    d.Cantidad,\r\n  " +
+                "  d.Precio,\r\n    d.SubTotal\r\n\r\nFROM Encabezado f\r\nINNER JOIN Detalle " +
+                "d \r\n    ON f.CodigoFactura = d.Codigo\r\n\r\nWHERE f.FechaFacturacion" +
+                " BETWEEN @fecha_inicio AND @fecha_fin";
+
+            command.CommandText = sqlReporte;
+            command.CommandType = CommandType.Text;
+            command.Parameters.AddWithValue("@fecha_inicio", inicio);
+            command.Parameters.AddWithValue("@fecha_fin", fin);
+
+            return null;
+        }
         public EncabezadoFactura SaveFactura(EncabezadoFactura pFactura, string codigoFactura)
         {
             EncabezadoFactura oFacturaEncabezado = null;
