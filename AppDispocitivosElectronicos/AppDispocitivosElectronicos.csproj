@@ -269,6 +269,12 @@
     <Compile Include="UI\Proceso Facturacion\FrmFacturacion.Designer.cs">
       <DependentUpon>FrmFacturacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\FrmReporteCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\FrmReporteCliente.Designer.cs">
+      <DependentUpon>FrmReporteCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Seguridad\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +341,9 @@
     <EmbeddedResource Include="UI\Proceso Facturacion\FrmFacturacion.resx">
       <DependentUpon>FrmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\FrmReporteCliente.resx">
+      <DependentUpon>FrmReporteCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Seguridad\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,7 +364,6 @@
   <ItemGroup>
     <Folder Include="Gestor\" />
     <Folder Include="Patrones\" />
-    <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Download Light gray abstract with white and gray diagonal rounded border lines and geometric dots pattern_ for free.jpg" />
